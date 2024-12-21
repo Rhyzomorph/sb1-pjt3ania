@@ -1,0 +1,37 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+body {
+  @apply bg-neutral-900 text-white font-mono antialiased;
+}
+
+.glassmorphism {
+  @apply bg-black/20 backdrop-blur-lg border border-white/10;
+}
+
+.terminal-input {
+  @apply bg-black/30 backdrop-blur-sm border border-white/10;
+}
+
+/* Custom scrollbar */
+::-webkit-scrollbar {
+  width: 8px;
+  height: 8px;
+}
+
+::-webkit-scrollbar-track {
+  @apply bg-black/20;
+}
+
+::-webkit-scrollbar-thumb {
+  @apply bg-white/10 rounded-full hover:bg-white/20 transition-colors;
+}
+
+/* Syntax highlighting */
+.token.comment { color: #6a9955; }
+.token.string { color: #ce9178; }
+.token.number { color: #b5cea8; }
+.token.keyword { color: #569cd6; }
+.token.function { color: #dcdcaa; }
+.token.operator { color: #d4d4d4; }
